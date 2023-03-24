@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Probando</title>
+	<title>Discotecas</title>
       <link rel="stylesheet" href="./-buscarDiscotecas/index_files/css/index.css" data-n-g="">
       <link rel="stylesheet" href="./-buscarDiscotecas/index_files/css/fuentes.css" data-n-g="">
       <link rel="icon" href="./-buscarDiscotecas/index_files/utils/favicon.ico">
+
+      <link rel="stylesheet" type="text/css" href="./-buscarDiscotecas/index_files/utils/Travel App Place Card UI Design_files/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="./-buscarDiscotecas/index_files/utils/Travel App Place Card UI Design_files/style.css">
 	<script src="jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -341,16 +344,17 @@
                         </div>
                      </div>
                   </div>
-                  <div id="mostrar_mensaje" class="md:mt-6">
-                  	<br>
-                  	<p>fdsdf </p>
-                  </div>
+                  <section class="main-content">
+                     <div class="contenedor" id="mostrar_mensaje">
+                        <!-- AQUI VAN LAS TARJETAS -->
+                     </div>
+                  </section>
                </main>
             </main>
             <footer class="w-full h-full z-[1]">
                <div class="bg-ligthGray w-full rounded-t-[20px] py-6">
                   <div class="max-w-7xl mx-auto px-4 md:px-6">
-                     <div class="grid grid-cols-1 lg:grid-cols-12 md:gap-4 lg:gap-8 pb-4 md:py-4 lg:py-8 text-primary bg-primary transition-colors duration-150">
+                     <div class="grid grid-cols-1 lg:grid-cols-12 md:gap-4 lg:gap-8 pb-4 md:py-4 lg:py-8 transition-colors duration-150">
                         <div class="col-span-1 lg:col-span-2">
                            <a class="flex flex-initial items-center font-bold md:mr-24">
                               <span class="rounded-full border border-accent-6 mr-2 test">
@@ -551,7 +555,7 @@
                               </span>
                            </div>
                         </div>
-                        <div class="col-span-1 lg:col-span-4 flex flex-col items-start text-primary">
+                        <div class="col-span-1 lg:col-span-4 flex flex-col items-start">
                            <div class="font-bold text-basePurple w-full py-3 md:py-0 md:pb-4">Legal</div>
                            <span class="py-3 md:py-0 md:pb-4">
                               <a class="text-accent-9 hover:text-accent-6 transition ease-in-out duration-150 flex">
