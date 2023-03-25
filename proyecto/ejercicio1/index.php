@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Discotecas</title>
+	<title>Dgiscotecas</title>
       <link rel="stylesheet" href="./-buscarDiscotecas/index_files/css/index.css" data-n-g="">
       <link rel="stylesheet" href="./-buscarDiscotecas/index_files/css/fuentes.css" data-n-g="">
       <link rel="icon" href="./-buscarDiscotecas/index_files/utils/favicon.ico">
@@ -13,6 +13,7 @@
 <body>
 <div id="__next">
          <main class="__className_1ab179">
+            <!-- BARRA DE NAVEGADOR -->
             <div id="navbar-root" class="duration-150 min-h-[60px] w-full">
                <div class="max-w-7xl mx-auto px-4 md:px-6">
                   <div class="relative min-h-[60px] flex flex-row justify-between items-center py-2">
@@ -299,7 +300,8 @@
                   </div>
                </div>
             </div>
-            <main>
+            <!-- BARRA DE NAVEGADOR -->
+            <!-- SECCION DE BUSQUEDA -->
                <main class="flex w-full flex-1 flex-col text-center">
                   <div class="relative min-h-max">
                      <div class="absolute mt-24 sm:mt-36 w-full flex flex-col items-center">
@@ -344,13 +346,16 @@
                         </div>
                      </div>
                   </div>
+            <!-- SECCION DE BUSQUEDA -->
+            <!-- SECCION DE RESULTADOS -->
                   <section class="main-content">
                      <div class="contenedor" id="mostrar_mensaje">
                         <!-- AQUI VAN LAS TARJETAS -->
                      </div>
                   </section>
+            <!-- SECCION DE RESULTADOS -->
                </main>
-            </main>
+            <!-- FOOTER -->
             <footer class="w-full h-full z-[1]">
                <div class="bg-ligthGray w-full rounded-t-[20px] py-6">
                   <div class="max-w-7xl mx-auto px-4 md:px-6">
@@ -626,9 +631,12 @@
                   </div>
                </div>
             </footer>
+            <!-- FOOTER -->
          </main>
       </div>
-    <input type="button" value="SALUDAME" onclick="saludame();">
+    <input type="button" value="SALUDAME" onclick="saludame();" class="Reservar">
+    
+    <script src="./-buscarDiscotecas/negocio.js"></script>
     <script src="./-buscarDiscotecas/controller.js"></script>
     <script src="./clases/discoteca.js"></script>
 </body>
