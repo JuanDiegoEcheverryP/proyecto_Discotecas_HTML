@@ -1,15 +1,17 @@
 <?php
-	include("../../abrir_conexion.php");
+	include("../../get_conexion.php");
   
   if(isset($_POST['userID']))
   {
+    //Toma las variables del CU
     $uid = $_POST['userID'];
 
+    //Definicion de variable para formatear en JSON
     function test($s, $n) {
       return substr($s,0,$n).substr($s,$n+1,strlen($s)-$n);
     }
 
-  //CONSULTAR
+  //CONSULTA
   $resultados = mysqli_query($conexion,"SELECT * FROM Discoteca WHERE Nombre LIKE '%".$uid."%'");
 
   $myJSON = "[";

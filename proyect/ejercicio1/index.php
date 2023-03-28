@@ -634,8 +634,8 @@
             <!-- FOOTER -->
          </main>
       </div>
-    <script src="./-buscarDiscotecas/negocio.js"></script>
-    <script src="./-buscarDiscotecas/controller.js"></script>
+    <script src="./-buscarDiscotecas/buscarDiscotecasNegocio.js"></script>
+    <script src="./-buscarDiscotecas/buscarDiscotecasController.js"></script>
     <script src="./clases/discoteca.js"></script>
 </body>
 </html>

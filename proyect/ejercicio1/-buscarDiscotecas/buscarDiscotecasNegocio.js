@@ -1,5 +1,7 @@
-console.log("Index negocio status: Cargado");
+console.log("buscarDiscotecasNegocio status: Cargado");
 
+
+//Construye la tarjeta de las discotecas
 function cardBuilder(discoteca) {
     try {
             return `
@@ -26,4 +28,33 @@ function cardBuilder(discoteca) {
     catch {
         return ;
     }
+}
+
+function consultarDiscotecas(valor) {
+    //Envia una consulta, si es exitosa, se ejecut ala linea "success: function(mensaje)"
+    $.ajax({
+		data: { userID : valor },
+		url: './-buscarDiscotecas/index_files/DAOBuscarDiscotecas.php', //Lugar a donde se envia
+		type: 'POST',
+		
+		success: function(mensaje)
+	  {
+		const jsonArr = mensaje; //Se recibe como formato string
+
+		const arr = JSON.parse(jsonArr); //Lo convierte a formato JSON para poder manejarlo luego por resultados
+
+		let print ="";
+
+		for(let i = 0; i < arr.length; i++) {
+			let obj = arr[i];
+
+            //Se crea la clase discoteca
+			const discoteca = new Discoteca (obj.idDiscoteca, obj.UsuarioIdDueno, obj.Nombre, obj.Ubicacion, obj.PermiteReservas, obj.Descripcion);
+			
+            //Concatena las tarjetas
+			print += cardBuilder(discoteca);
+		}
+        $('#mostrar_mensaje').html(print); //Imprime el mensaje
+	  }
+	})
 }
