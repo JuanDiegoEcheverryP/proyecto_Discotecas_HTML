@@ -8,6 +8,7 @@
 
       <link rel="stylesheet" type="text/css" href="./-buscarDiscotecas/index_files/utils/Travel App Place Card UI Design_files/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="./-buscarDiscotecas/index_files/utils/Travel App Place Card UI Design_files/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -319,8 +320,9 @@
                         </div>
                         <div class="w-full px-4 md:px-0 md:w-2/3 lg:w-1/2 mt-9">
                            <div class="fixed inset-0 h-screen w-screen z-[99] opacity-0 pointer-events-none bg-white transition-opacity ease-in duration-150"></div>
-                           <div class="relative w-full transition-colors duration-150 bg-white rounded-full sm:min-w-[300px] shadow-xl">
+                           <div class="relative w-full transition-colors duration-150 bg-whiteT rounded-full sm:min-w-[300px]">
                               <div class="relative flex">
+                              <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="filtros" class="button-34 shadow-xl"><i class="fa fa-filter" style="font-size:24px"></i></button>
                                  <input id="search" autocomplete="off" class="px-5 md:px-10 bg-ligthGray rounded-full py-4 appearance-none w-full transition duration-150 ease-in pr-10 sm:min-w-[300px] outline-none borde text-sm md:text-base" placeholder="Buscar por nombre de discoteca">
                                  <div class="absolute inset-y-0 right-0 pr-2 flex items-center">
                                     <button id="botonBuscar" role="link" class="flex flex-row bg-basePurple px-4 md:px-6 rounded-full h-[75%] items-center cursor-pointer" onclick="OnclickBuscar()">
@@ -634,8 +636,103 @@
             <!-- FOOTER -->
          </main>
       </div>
+      <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p>Opciones</p>
+    </div>
+    <div class="container">
+      <p><b>Ubicacion</b></p>
+      <button class="button-34 noShadow">Usaquen</button>
+      <button class="button-34 noShadow">Chapinero</button>
+      <button class="button-34 noShadow">Santa Fe</button>
+      <button class="button-34 noShadow">San Cristobal</button>
+      <button class="button-34 noShadow">Usme</button>
+      <button class="button-34 noShadow">Tunjuelito</button>
+      <button class="button-34 noShadow">Bosa</button>
+      <button class="button-34 noShadow">Kennedy</button>
+      <button class="button-34 noShadow">Fontibon</button>
+      <button class="button-34 noShadow">Engativa</button>
+      <button class="button-34 noShadow">Suba</button>
+      <button class="button-34 noShadow">Barrios Unidos</button>
+      <button class="button-34 noShadow">Teusaquillo</button>
+      <button class="button-34 noShadow">Los Martires</button>
+      <button class="button-34 noShadow">Antonio Nariño</button>
+      <button class="button-34 noShadow">Puente Aranda</button>
+      <button class="button-34 noShadow">La Candelaria</button>
+      <button class="button-34 noShadow">Rafael Uribe Uribe</button>
+      <button class="button-34 noShadow">Ciudad Bolivar</button>
+      <br>
+      <p><b>Tematica</b></p>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <button class="button-34 noShadow">Por poner</button>
+      <br>
+      <p><b>Valoracion</b></p>
+      <button class="button-34 noShadow">
+      <span class="fa fa-star checked"></span>
+      </button>
+      <button class="button-34 noShadow">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      </button>
+      <button class="button-34 noShadow">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      </button>
+      <button class="button-34 noShadow">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      </button>
+      <button class="button-34 noShadow">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      </button>
+      <br>
+      <p><b>Precio</b></p>
+      <button class="button-34 noShadow">
+      <i class="fa fa-dollar"></i>
+      </button>
+      <button class="button-34 noShadow">
+      <i class="fa fa-dollar"></i>
+      <i class="fa fa-dollar"></i>
+      </button>
+      <button class="button-34 noShadow">
+      <i class="fa fa-dollar"></i>
+      <i class="fa fa-dollar"></i>
+      <i class="fa fa-dollar"></i>
+      </button>
+    </div>
+    <div class="container flex justify-between " style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="button-34">Cancelar</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="button-34">Apicar filtro</button>
+    </div>
+  </form>
+</div>
+
+
     <script src="./-buscarDiscotecas/buscarDiscotecasNegocio.js"></script>
     <script src="./-buscarDiscotecas/buscarDiscotecasController.js"></script>
     <script src="./clases/discoteca.js"></script>
+    <p>test</p>
+    
 </body>
 </html>
