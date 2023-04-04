@@ -1049,6 +1049,10 @@ picture {
     }
 }
 
+.inline_block {
+    display: inline-block;
+}
+
 .__className_1ab179 {
     font-family: __Poppins_1ab179,__Poppins_Fallback_1ab179;
     font-style: normal

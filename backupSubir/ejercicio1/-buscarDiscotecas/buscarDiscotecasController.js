@@ -9,8 +9,8 @@ window.onclick = function(event) {
 }
 
 //Cosnultar
-function OnclickBuscar( ) {
-	let a = consultarDiscotecas(document.getElementById("search").value);
+function OnclickBuscar(filtro, tipo, valorFiltro) {
+	let a = consultarDiscotecas(document.getElementById("search").value,filtro, tipo,valorFiltro);
 }
 
 //Recargar
@@ -18,11 +18,16 @@ function recargar() {
 	window.location.reload();
 }
 
+//Pone los botones de los filtros
+function popularFiltros() {
+	populateLocalidad();
+	populateTematica();
+}
+
 //Cuando se inicia la pantalla por primera vez
 function initialize() {
-	OnclickBuscar();
+	popularFiltros();
+	OnclickBuscar("vacio","","");
 }
 
 initialize();
-
-console.log("buscarDiscotecasController status: Cargado");

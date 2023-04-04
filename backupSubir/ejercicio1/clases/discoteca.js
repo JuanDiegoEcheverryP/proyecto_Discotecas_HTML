@@ -1,5 +1,5 @@
 class Discoteca {
-  constructor(idDiscoteca, idUsuarioDueno, nombre, ubicacion, permiteReservas, descripcion) {
+  constructor(idDiscoteca, idUsuarioDueno, nombre, ubicacion, permiteReservas, descripcion, localidad, valoracion) {
 
     this.idDiscoteca = idDiscoteca;
     this.idUsuarioDueno = idUsuarioDueno;
@@ -7,6 +7,8 @@ class Discoteca {
     this.Ubicacion = ubicacion;
     this.PermiteReservas = permiteReservas;
     this.Descripcion = descripcion;
+    this.localidad = localidad;
+    this.valoracion = valoracion;
   }
   getIdDiscoteca() {
     return this.idDiscoteca;
@@ -34,6 +36,12 @@ class Discoteca {
   }
   getPermiteReservas() {
     return this.PermiteReservas;
+  }
+  getLocalidad() {
+    return this.localidad;
+  }
+  getValoracion() {
+    return this.valoracion;
   }
   setPermiteReservas(permiteReservas) {
     this.PermiteReservas = permiteReservas;
