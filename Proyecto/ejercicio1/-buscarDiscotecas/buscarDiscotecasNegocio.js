@@ -1,4 +1,4 @@
-console.log("buscarDiscotecasNegocio status: Cargado");
+console.log("buscarDiscotecasNegocio status: Cargadsssso");
 
 
 //Construye la tarjeta de las discotecas
@@ -73,7 +73,13 @@ function consultarDiscotecas(valor, filtro, tipoFiltro, valorFiltro) {
             //Concatena las tarjetas
 			print += cardBuilder(discoteca);
 		}
-        $('#mostrar_mensaje').html(print); //Imprime el mensaje
+        if (print == "") {
+            alert("La busqueda que intento realiar no tiene resultados");
+        }
+        else {
+            $('#mostrar_mensaje').html(print); //Imprime el mensaje
+        }
+        
 	  }
 	})
 }
