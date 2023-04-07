@@ -77,5 +77,5 @@ function onlyLettersAndSpaces(str) {
   return /^[A-Za-z\s]*$/.test(str);
 }
 
-console.log("Arrss");
+console.log("Araaaaarss");
 

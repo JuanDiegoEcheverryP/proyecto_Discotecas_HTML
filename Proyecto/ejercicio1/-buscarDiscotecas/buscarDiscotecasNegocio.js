@@ -10,7 +10,7 @@ function cardBuilder(discoteca) {
                     <img src="https://kinsta.com/wp-content/uploads/2020/09/imag-file-types-1024x512.png" class="place-card__img-thumbnail" alt="Thumbnail">
                 </div>
                 <div class="place-card__content">
-                    <h5 class="place-card__content_header"><a href="https://kiranworkspace.com/demo/projects/code-snippets/card/travel-app-card/#!" class="text-dark">` + discoteca.getNombre() +`</a> <a href="https://kiranworkspace.com/demo/projects/code-snippets/card/travel-app-card/#!"><i class="fa fa-heart-o"></i></a></h5>
+                    <h5 class="place-card__content_header"><a class="te" onclick="irDescripcion(`+discoteca.getIdDiscoteca() + `)">` + discoteca.getNombre() +`</a> <a href="https://kiranworkspace.com/demo/projects/code-snippets/card/travel-app-card/#!"><i class="fa fa-heart-o"></i></a></h5>
                     <div class="flex-center">
                         <p class="mb-0"><i class="fa fa-map-marker"></i> <span class="text-muted">` + discoteca.getUbicacion() + `</span></p>
                         <div class="rating-box">
@@ -20,7 +20,7 @@ function cardBuilder(discoteca) {
                         </div>
                     </div>
                 <br>
-                <button class="button-34" role="button">Reservar</button>
+                <button class="button-34" role="button" onclick="irReservar(`+discoteca.getIdDiscoteca() + `)">Reservar</button>
                 </div>
             </div>
             </div>`;
@@ -28,6 +28,14 @@ function cardBuilder(discoteca) {
     catch {
         return ;
     }
+}
+
+function irDescripcion(id) {
+    console.log("ir descipcion: " + id);
+}
+
+function irReservar(id) {
+    console.log("ir reservar: " + id);
 }
 
 function localidadBuilder(objLocalidad) {
@@ -65,15 +73,21 @@ function consultarDiscotecas(valor, filtro, tipoFiltro, valorFiltro) {
 
 		let print ="";
 
-		for(let i = 0; i < arr.length; i++) {
-			let obj = arr[i];
-            //Se crea la clase discoteca
-			const discoteca = new Discoteca (obj.idDiscoteca, obj.UsuarioIdDueno, obj.Nombre, obj.Ubicacion, obj.PermiteReservas, obj.Descripcion, obj.localidad, obj.valoracion);
+        if (arr.length == 0) {
+            alert("La consulta no tiene resultados");
+        }
+        else {
+    		for(let i = 0; i < arr.length; i++) {
+    			let obj = arr[i];
+                //Se crea la clase discoteca
+    			const discoteca = new Discoteca (obj.IdDiscoteca, obj.UsuarioIdDueno, obj.Nombre, obj.Ubicacion, obj.PermiteReservas, obj.Descripcion, obj.localidad, obj.valoracion);
 
-            //Concatena las tarjetas
-			print += cardBuilder(discoteca);
-		}
-        $('#mostrar_mensaje').html(print); //Imprime el mensaje
+                //Concatena las tarjetas
+    			print += cardBuilder(discoteca);
+                console.log(obj.IdDiscoteca);
+    		}
+            $('#mostrar_mensaje').html(print); //Imprime el mensaje
+        }
 	  }
 	})
 }
@@ -135,3 +149,4 @@ function populateTematica() {
       }
     })
 }
+
