@@ -22,17 +22,23 @@ function loguear() {
   let usuario = document.getElementById("usuario").value;
   let contrasena = document.getElementById("contrasena").value;
 
-  if (usuario == "" || contrasena == "") {
-  		$('#msg_err').html("Llene todos los campos");
+  if (onlyLettersAndSpaces(usuario) && onlyLettersAndSpaces(contrasena)) {
+    if (usuario == "" || contrasena == "") {
+          $('#msg_err').html("Llene todos los campos");
+    }
+    else {
+      if (login(usuario,contrasena)) {
+          console.log("Redireccionando");
+      }
+      else {
+          $('#msg_err').html("Usuario o cotraseña incorrectos");
+      }
+    }
   }
-  else {
-  	if (login(usuario,contrasena)) {
-  		console.log("Redireccionando");
-  	}
-  	else {
-  		$('#msg_err').html("Usuario o cotraseña incorrectos");
-  	}
+  else{
+    $('#msg_err').html("Ingreso caracteres invalidos");
   }
+  
 }
 
 function registrarse() {
@@ -42,20 +48,24 @@ function registrarse() {
 	let passw = document.getElementById("signPassw").value;
 	let passw2 = document.getElementById("signPassw2").value;
 
-	if(passw2 == passw) {
-		if(registro(nombre,apellido,username,passw,passw2)) {
-		console.log("Exitoso");
-		}
-		else {
-			console.log("MAL");
-		}
-	}
-	else {
-		console.log("las contrasenas no coinciden");
-	}
-
-	
-	console.log(nombre + " " + apellido + " " + username + " " + passw + " " + passw2);
+  if (onlyLettersAndSpaces(nombre) && onlyLettersAndSpaces(apellido) && onlyLettersAndSpaces(username) && onlyLettersAndSpaces(passw) && onlyLettersAndSpaces(passw2)) {
+    if(passw2 == passw) {
+      if(registro(nombre,apellido,username,passw,passw2)) {
+      console.log("Exitoso");
+      }
+      else {
+        console.log("MAL");
+      }
+    }
+    else {
+      console.log("las contrasenas no coinciden");
+    }
+    console.log(nombre + " " + apellido + " " + username + " " + passw + " " + passw2);
+  }
+  else {
+    alert("Ingreso caracteres invalidos");
+  }
+  	
 }
 
 
@@ -63,4 +73,9 @@ function irInicio() {
 	window.location.href = "index.html";
 }
 
-console.log("Aasss");
+function onlyLettersAndSpaces(str) {
+  return /^[A-Za-z\s]*$/.test(str);
+}
+
+console.log("Arrss");
+

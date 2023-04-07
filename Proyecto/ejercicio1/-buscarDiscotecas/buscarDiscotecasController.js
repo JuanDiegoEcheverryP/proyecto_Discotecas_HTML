@@ -10,7 +10,13 @@ window.onclick = function(event) {
 
 //Cosnultar
 function OnclickBuscar(filtro, tipo, valorFiltro) {
-	let a = consultarDiscotecas(document.getElementById("search").value,filtro, tipo,valorFiltro);
+	let d = document.getElementById("search").value;
+	if (onlyLettersAndSpaces(d)) {
+		let a = consultarDiscotecas(document.getElementById("search").value,filtro, tipo,valorFiltro);
+	}
+	else {
+		alert("Busqueda invalida");
+	}
 }
 
 //Recargar
@@ -29,6 +35,10 @@ function popularFiltros() {
 	populateTematica();
 }
 
+function onlyLettersAndSpaces(str) {
+  return /^[A-Za-z\s]*$/.test(str);
+}
+
 //Cuando se inicia la pantalla por primera vez
 function initialize() {
 	popularFiltros();
@@ -37,4 +47,4 @@ function initialize() {
 
 initialize();
 
-console.log("aassda");
+console.log("asrrrsdssd");
