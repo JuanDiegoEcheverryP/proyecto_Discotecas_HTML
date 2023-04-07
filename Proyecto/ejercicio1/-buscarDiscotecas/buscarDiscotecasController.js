@@ -10,13 +10,7 @@ window.onclick = function(event) {
 
 //Cosnultar
 function OnclickBuscar(filtro, tipo, valorFiltro) {
-	let campo = document.getElementById("search").value;
-	if (/^[A-Za-z\s]*$/.test(campo)) {
-		let a = consultarDiscotecas(document.getElementById("search").value,filtro, tipo,valorFiltro);
-	}
-	else {
-		alert("Ingrese solo caracteres alfanumericos")
-	}
+	let a = consultarDiscotecas(document.getElementById("search").value,filtro, tipo,valorFiltro);
 }
 
 //Recargar
@@ -41,21 +35,6 @@ function initialize() {
 	OnclickBuscar("vacio","","");
 }
 
-function isAlphaNumeric(str) {
-  var code, i, len;
-
-  for (i = 0, len = str.length; i < len; i++) {
-    code = str.charCodeAt(i);
-    if (!(code > 47 && code < 58) && // numeric (0-9)
-        !(code > 64 && code < 91) && // upper alpha (A-Z)
-        !(code > 96 && code < 123)) { // lower alpha (a-z)
-      return false;
-    }
-  }
-  return true;
-};
-
-
 initialize();
 
-console.log("aassxxzxxzda");
+console.log("aassda");
