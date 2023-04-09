@@ -74,8 +74,13 @@ function irInicio() {
 }
 
 function onlyLettersAndSpaces(str) {
-  return /^[A-Za-z\s]*$/.test(str);
+  return /^[A-Za-z0-9\s]+$/g.test(str);
 }
 
-console.log("Araaaaarss");
+//Recargar
+function recargar() {
+  window.location.reload();
+}
+
+console.log("Carga el controlador del login");
 

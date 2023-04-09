@@ -1,4 +1,4 @@
-console.log("buscarDiscotecasNegocio status: Cargado");
+console.log("buscar Discotecas Negocio status: Cargado");
 
 
 //Construye la tarjeta de las discotecas
@@ -10,7 +10,7 @@ function cardBuilder(discoteca) {
                     <img src="https://kinsta.com/wp-content/uploads/2020/09/imag-file-types-1024x512.png" class="place-card__img-thumbnail" alt="Thumbnail">
                 </div>
                 <div class="place-card__content">
-                    <h5 class="place-card__content_header"><a class="te" onclick="irDescripcion(`+discoteca.getIdDiscoteca() + `)">` + discoteca.getNombre() +`</a> <a href="https://kiranworkspace.com/demo/projects/code-snippets/card/travel-app-card/#!"><i class="fa fa-heart-o"></i></a></h5>
+                    <h5 class="place-card__content_header"><a class="hover-underline-animation" href="verDiscoteca.php?IdDiscoteca=`+discoteca.getIdDiscoteca() + `" onclick="irDescripcion(`+discoteca.getIdDiscoteca() + `)">` + discoteca.getNombre() +`</a> <a href="index.html"><i class="fa fa-heart-o"></i></a></h5>
                     <div class="flex-center">
                         <p class="mb-0"><i class="fa fa-map-marker"></i> <span class="text-muted">` + discoteca.getUbicacion() + `</span></p>
                         <div class="rating-box">
@@ -84,7 +84,6 @@ function consultarDiscotecas(valor, filtro, tipoFiltro, valorFiltro) {
 
                 //Concatena las tarjetas
     			print += cardBuilder(discoteca);
-                console.log(obj.IdDiscoteca);
     		}
             $('#mostrar_mensaje').html(print); //Imprime el mensaje
         }

@@ -47,4 +47,4 @@ function initialize() {
 
 initialize();
 
-console.log("aads");
+console.log("carga el controlador de buscar discotecas");
