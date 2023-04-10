@@ -12,6 +12,8 @@ function login(usuario,contrasena) {
 
 		const arr = JSON.parse(jsonArr); //Lo convierte a formato JSON para poder manejarlo luego por resultados
 		if (arr.length == 1) {
+			console.log(arr[0]);
+  			localStorage.setItem("usuario", jsonArr);
 			window.location.href = "index.html";
 			return true;
 		}

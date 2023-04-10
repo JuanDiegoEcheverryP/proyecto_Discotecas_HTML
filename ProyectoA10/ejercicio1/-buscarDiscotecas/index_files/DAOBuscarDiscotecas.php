@@ -15,7 +15,10 @@
     }
 
   //CONSULTA
-  if ($a == 'popularLocalidades') {
+  if ($a == 'logCheck') {
+    $resultados = mysqli_query($conexion,"SELECT EstadoUsuario FROM `usuario` WHERE Nombre = '".$uid."'");  
+  }
+  elseif ($a == 'popularLocalidades') {
     $resultados = mysqli_query($conexion,"SELECT * FROM localidad");  
   }
   elseif ($a == 'popularTematica') {

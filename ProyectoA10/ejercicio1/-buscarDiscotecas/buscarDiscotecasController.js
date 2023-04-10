@@ -41,6 +41,7 @@ function onlyLettersAndSpaces(str) {
 
 //Cuando se inicia la pantalla por primera vez
 function initialize() {
+	console.log("Logeado: " + JSON.parse(localStorage.getItem("usuario"))[0].Nombre);
 	popularFiltros();
 	OnclickBuscar("vacio","","");
 }
