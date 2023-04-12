@@ -21,7 +21,7 @@ function descriptionBuilder(discoteca) {
                         <h4>Descripcion</h4>
                         <p>`+ discoteca.getDescripcion() + `</p>
                         <br>
-                        <button class="button-34" role="button" onclick="">Reservar</button>
+                        <button class="button-34" role="button" onclick="irReservar(`+discoteca.getIdDiscoteca() + `)">Reservar</button>
                      </div>
                   </div>
                   <hr>
@@ -33,6 +33,54 @@ function descriptionBuilder(discoteca) {
     catch {
         return ;
     }
+}
+
+function irReservar(id) {
+    if (isLoged()) {
+        localStorage.setItem("IdDiscoteca", id);
+        window.location.href = "reservar.html";
+    }
+    else {
+    }
+}
+
+var y;
+function isLoged() {
+    let ad = JSON.parse(localStorage.getItem("usuario"));
+
+    if (localStorage.getItem("usuario") == null) {
+        y = false;
+    }
+    else {
+        try {
+            $.ajax({
+                data: { userID : ad[0].Nombre, filter: 'logCheck', tipoFiltro: '', valorFiltro: '' },
+                url: './-buscarDiscotecas/index_files/DAOBuscarDiscotecas.php', //Lugar a donde se envia
+                type: 'POST',
+                    
+                success: function(mensaje)
+                {
+                    const jsonArr = mensaje; //Se recibe como formato string
+                    const arr = JSON.parse(jsonArr); //Lo convierte a formato JSON para poder manejarlo luego por resultados
+                    try {
+                        if (arr[0].EstadoUsuario == 1) {
+                            y = true;
+                        }
+                        else {
+                            y = false;
+                        }
+                    }
+                    catch {
+                        y = false;
+                    }
+                }
+            })
+        }
+        catch {
+            y = false;
+        }
+    }
+    return y;
 }
 
 function getDiscoteca(idDsicoteca) {

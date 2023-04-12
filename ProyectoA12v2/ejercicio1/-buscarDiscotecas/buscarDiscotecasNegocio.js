@@ -36,7 +36,6 @@ function irDescripcion(id) {
 
 function irReservar(id) {
     if (isLoged()) {
-        alert(id);
         localStorage.setItem("IdDiscoteca", id);
         window.location.href = "reservar.html";
     }

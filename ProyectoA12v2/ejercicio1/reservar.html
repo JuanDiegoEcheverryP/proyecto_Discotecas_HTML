@@ -66,7 +66,7 @@
                <div class="formbold-form-wrapper" style="
                   border: 2px solid #CCC;
                   border-radius: 30px;">
-                  <form action="https://formbold.com/s/FORM_ID" method="POST" style="
+                  <form method="POST" style="
                      ">
                      <h3 style="
                         font-weight: bolder;
@@ -113,29 +113,29 @@
                            </div>
                         </div>
                      </div>
-                     <div class="" style="
+                     <div hidden class="" style="
                         padding: 5% 5% 0 5%;
                         ">
                         <label for="fName" class="formbold-form-label" style="font-weight: bold;">Falta hacer lo de los servicios por discoteca</label><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                         <label for="vehicle1" style="
                            color: black;
-                           "> I have a bike</label><br>
+                           ">Conductor nocturno</label><br>
                         <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                        <label for="vehicle2"> I have a car</label><br>
+                        <label for="vehicle2"> Guardaspaldas</label><br>
                         <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                        <label for="vehicle3"> I have a boat</label><br>
+                        <label for="vehicle3"> Zona privada</label><br>
                      </div>
                      <div class="" style="
                         padding: 5% 5% 0 5%;
                         ">
                         <label for="fName" class="formbold-form-label" style="font-weight: bold;">Si desea dejarle alguna recomendación o consideración del staff para la reserva, escribala</label>
-                        <input type="text" name="fName" id="fName" placeholder="First Name" class="formbold-form-input" style="
+                        <input type="text" name="fName" id="fName" placeholder="Comentarios" class="formbold-form-input" style="
                            width: 100%;
                            ">
                      </div>
                      <hr>
                      <div style="display: flex;justify-content: center;margin-bottom: 5%;">
-                        <button class="formbold-btn" style="">Submit</button>
+                        <button class="formbold-btn" style="" onclick="reservar()">Realizar reserva</button>
                      </div>
                   </form>
                </div>
@@ -382,6 +382,8 @@
             </div>
          </div>
       </footer>
+      <button onclick="reservar()">probar</button>
+      <div id="testing"></div>
       <!-- FOOTER -->
          <script src="./clases/discoteca.js"></script>
          <script src="./-reservar/reservarNegocio.js"></script>

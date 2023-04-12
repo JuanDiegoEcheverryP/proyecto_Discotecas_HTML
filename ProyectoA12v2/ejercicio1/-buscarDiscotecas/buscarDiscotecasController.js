@@ -8,7 +8,7 @@ window.onclick = function(event) {
     }
 }
 
-//Cosnultar
+//Consultar
 function OnclickBuscar(filtro, tipo, valorFiltro) {
 	let d = document.getElementById("search").value;
 	if (onlyLettersAndSpaces(d)) {
