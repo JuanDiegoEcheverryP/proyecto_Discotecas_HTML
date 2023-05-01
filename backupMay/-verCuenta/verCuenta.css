@@ -1177,7 +1177,7 @@ button {
   /** Boton filtro **/
   input[type=text], input[type=password] {
     width: 20px;
-    margin: 8px 0;
+    padding: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -2060,3 +2060,16 @@ ul, li {
 .verCuenta, .cerrarSesion {
     font-size: 14px;
 }
+
+input:hover,
+input:focus {
+  background-color: #f1f1f1; /* color de fondo al hacer hover o focus */
+}
+
+input:focus:valid {
+    padding: 5px !important;
+  border: 2px solid #6600c3 !important;
+  border-radius: 10px;
+}
+
+

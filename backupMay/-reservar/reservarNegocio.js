@@ -14,6 +14,8 @@ function algo(usuario,fecha,tiempo,descripcion,idDiscoteca,idUsuario) {
         //alert("Cantidad personas: " + a + "; Fecha: " + b + "; Hora: " + c + "Comentarios: " + d);
 	  }
 	})
-
+	
+	
+	window.location.href = "index.html";
 	// body...
 }

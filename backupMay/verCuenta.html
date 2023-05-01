@@ -118,17 +118,26 @@
               <tr>
                 <th width="30%">Nombres</th>
                 <td width="2%">:</td>
-                <td id="nombres">xxx</td>
+                <td><input id="nombres" type="text" style="
+    width: 100%;
+    border: none;
+" value="abc"></td>
               </tr>
               <tr>
                 <th width="30%">Apellidos</th>
                 <td width="2%">:</td>
-                <td id="apellidos">xxx</td>
+                <td><input id="apellidos" type="text" style="
+    width: 100%;
+    border: none;
+" value="abc"></td>
               </tr>
               <tr>
                 <th width="30%">Nombre de usuario</th>
                 <td width="2%">:</td>
-                <td id="usuario">xxx</td>
+                <td><input id="usuario" type="text" style="
+    width: 100%;
+    border: none;
+" value="abc"></td>
               </tr>
               
             </tbody></table>
@@ -191,7 +200,7 @@ margin: 10px;
 </style>
 <div id="main">
   <button class="button-37 borrar" id="eliminar">Eliminar cuenta</button>
-  <button class="button-37" id="actualizar">Actualizar cuenta</button>
+  <button class="button-37" id="actualizar" onclick="actualizar()">Actualizar cuenta</button>
 </div>
           </div>
         </div>
@@ -213,31 +222,9 @@ margin: 10px;
         </div>
       </div>
       
-<div class="card-body pt-0">
+<div class="card-body pt-0" id="reservasTag">
     <br>
-            <table class="table table-bordered">
-              <tbody><tr>
-                <th width="30%">Id Reserva</th>
-                <td width="2%">:</td>
-                <td>xxx</td>
-              </tr>
-              <tr>
-                <th width="30%">Lugar</th>
-                <td width="2%">:</td>
-                <td>xxx</td>
-              </tr>
-              <tr>
-                <th width="30%">Cantidad de personas</th>
-                <td width="2%">:</td>
-                <td>xxx</td>
-              </tr>
-              <tr>
-                <th width="30%">Fecha</th>
-                <td width="2%">:</td>
-                <td>xxx</td>
-              </tr>
-              
-            </tbody></table>
+           <p style="text-align: center;color:gray">No tiene ninguna reserva</p>
           </div>
     </div>
   </div>

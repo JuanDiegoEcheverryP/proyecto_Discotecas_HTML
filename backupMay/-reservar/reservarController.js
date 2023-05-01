@@ -34,13 +34,19 @@ function reservar() {
     }
 
     algo(usuario, fecha, tiempo, descripcion, idDiscoteca, idUsuario);
-    alert("Reserva realizada");
+    
 	window.location.href = "index.html";
+	alert("Reserva realizada");
 }
 
 function irLogin() {
   window.location.href = "login.html";
 }
+
+function irCuenta() {
+	window.location.href = "verCuenta.html";
+}
+
 
 console.log("123s");
 
@@ -51,7 +57,7 @@ try {
       let miDiv = document.getElementById("tert");
       miDiv.innerHTML = '<li><a id="logName" class="text-basePurple font-bold lex flex-row justify-center items-center leading-6 transition ease-in-out duration-75 cursor-pointer text-accent-5 hover:text-accent-9 focus:outline-none focus:text-accent-8  hidden sm:inline-flex ml-6 underline decoration-baseGreen decoration-2 hover-underline-animation" ">' + JSON.parse(localStorage.getItem("usuario"))[0].Nombre+'</a>' +
                                 '<ul>' +
-                                  '<li class="verCuenta"><a href="#">Ver cuenta</a></li><br>'+
+                                  '<li class="verCuenta" onclick="irCuenta()"><a href="#">Ver cuenta</a></li><br>'+
                                   '<li class="cerrarSesion" onclick="salir()"><a href="#">Cerrar sesión</a></li>'+
                                 '</ul>'+
                               '</li>';
