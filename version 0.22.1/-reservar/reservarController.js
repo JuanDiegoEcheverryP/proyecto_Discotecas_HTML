@@ -7,18 +7,13 @@ function recargar() {
   window.location.reload();
 }
 
-function test() {
-  var algos = prompt("Escribe algo: ");
-  localStorage.setItem("nombre_variable", algos);
-  window.location.href = "testeo.php";
-}
-
+//Funcion para salir hacia la pagina principal
 function salir() {
   localStorage.removeItem("usuario");
   window.location.href = "index.html";
 }
 
-
+//Funcion para validar y reservar
 function reservar() {
     let idDiscoteca = localStorage.getItem('IdDiscoteca');
     let usuario = document.getElementById('guest').value;
@@ -39,16 +34,15 @@ function reservar() {
 	alert("Reserva realizada");
 }
 
+//Funcion que lleva al login
 function irLogin() {
   window.location.href = "login.html";
 }
 
+//Funcion que lleva a ver cuenta
 function irCuenta() {
 	window.location.href = "verCuenta.html";
 }
-
-
-console.log("123s");
 
 try {
     if (JSON.parse(localStorage.getItem("usuario"))[0].Nombre != null) {
