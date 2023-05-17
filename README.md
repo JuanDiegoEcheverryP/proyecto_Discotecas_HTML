@@ -8,7 +8,7 @@ Este proyecto consiste en una página web desarrollada en HTML que tiene como ob
 - **Búsqueda avanzada**: Los usuarios pueden realizar búsquedas de discotecas utilizando diferentes filtros, como ubicación, temática, rango de precios, etc.
 - **Información detallada**: Cada discoteca listada en el sitio web cuenta con una página de detalles donde se proporciona información relevante de la discoteca.
 - **Reseñas y calificaciones**: Los usuarios registrados pueden dejar reseñas y calificaciones para las discotecas que han visitado.
-- **Descuentos por tokens**: Los usuarios pueden recibir descuentos a traves de tokens que se les da cada vez que reservan con la pagina, y podran redimirlo en el precio de discotecas o en servicios de la discoteca.
+- **Tokens**: Ingresa dinero a nuestra aplicación y úsalo en sitios nocturnos para disfrutar de una experiencia única y sin preocupaciones. Descarga la app y empieza a vivir la vida nocturna al máximo..
 
 ## Requisitos del proyecto
 
